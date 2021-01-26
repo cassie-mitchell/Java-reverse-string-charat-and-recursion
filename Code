@@ -1,0 +1,18 @@
+import java.util.*;
+
+class ReverseofaString{//name the class
+
+	String reverse(String s){//name the reversing method
+	 if(s.length() == 0)//if the string input has 0 length return a blank string
+     	 return " ";
+  	 return s.charAt(s.length()-1) + reverse(s.substring(0,s.length()-1));//else return the last character of the string plus the result of applying the reverse method to a substring of the string 
+  }
+	
+	public static void main(String[ ] arg){//main method will execute first
+  	ReverseofaString rev=new ReverseofaString();//create a new instance of the reverseofastring class
+  	Scanner sc=new Scanner(System.in);//get some user input
+  	System.out.print("Enter a string : ");
+  	String  str=sc.nextLine();	//read input
+  	System.out.println("Reverse of a String  :"+rev.reverse(str));//apply reverse method to input
+	}	
+}
